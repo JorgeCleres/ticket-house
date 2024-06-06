@@ -40,7 +40,7 @@ export default defineComponent({
 
 @media (max-width: 1200px) {
     .menu {
-        width: 100%;
+        width: auto;
         height: 10vh;
         background: var(--color-primary);
         border-radius: 0 0 20px 20px;
@@ -50,5 +50,8 @@ export default defineComponent({
         justify-content: space-between;
         align-items: center;
     }
+    .botao {
+        width: 40px !important;
+    }   
 }
 </style>

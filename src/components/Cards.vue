@@ -14,10 +14,17 @@ export default defineComponent({
 
 <style scoped>
 .cards {
+    height: 16%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     overflow: hidden;
     padding: 0;
+}
+
+@media(max-width: 480px) {
+    .cards {
+        display: inline !important;
+    }
 }
 </style>

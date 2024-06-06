@@ -34,15 +34,15 @@ export default defineComponent({
 });
 </script>
   
-  <style scoped>
+<style scoped>
 .card {
     width: 100%;
     padding: 10px;
-    width: 23%;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     transition: 0.5s;
     background: white;
+    margin: 0 5px;
 }
 
 .card:hover {
@@ -56,7 +56,7 @@ export default defineComponent({
     align-items: center;
 }
 
-h2 {
+/* h2 {
     margin: 0;
     font-size: 2rem;
 }
@@ -68,6 +68,6 @@ i {
 h3 {
     margin: 0;
     font-size: 3.5rem;
-}
+} */
 </style>
   
