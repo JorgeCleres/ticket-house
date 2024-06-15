@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.cards {
+/* .cards {
     height: 16%;
     display: flex;
     flex-direction: row;
@@ -26,5 +26,5 @@ export default defineComponent({
     .cards {
         display: inline !important;
     }
-}
+} */
 </style>

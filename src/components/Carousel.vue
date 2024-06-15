@@ -2,14 +2,16 @@
     <div class="cards">
         <Carousel
             :itemsToShow="itemsToShow"
-            :autoplay="5000"
+            :autoplay="true"
             :wrapAround="true"
+            :transition="4000"
         >
             <Slide v-for="dado in dados" :key="dado.texto">
                 <Card
                     :texto="dado.texto"
                     :icone="dado.icone"
                     :cor="dado.cor"
+                    :fundoIcone="dado.fundoIcone"
                     :quantidade="dado.quantidade"
                 />
             </Slide>
@@ -36,7 +38,7 @@ export default {
     },
     data() {
         return {
-            itemsToShow: 3,
+            itemsToShow: 4,
         };
     },
     mounted() {
@@ -51,7 +53,7 @@ export default {
             if (window.innerWidth <= 480) {
                 this.itemsToShow = 3;
             } else {
-                this.itemsToShow = 3;
+                this.itemsToShow = 4;
             }
         },
     },
@@ -78,6 +80,5 @@ export default {
         display: inline !important;
     }
 }
-
 </style>
   

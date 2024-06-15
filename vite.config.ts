@@ -10,6 +10,13 @@ export default defineConfig({
     vue(),
     VitePWA({ registerType: 'autoUpdate' })
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/styles/variables.scss";`
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

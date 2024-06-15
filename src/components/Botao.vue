@@ -1,5 +1,6 @@
 <template>
-    <button>{{ screen ? "Adicionar" : "+" }}</button>
+    <button v-if="screen">Adicionar</button>
+    <button v-else><i class="bi bi-plus"></i></button>
 </template>
 
 <script lang="ts">
@@ -23,7 +24,8 @@ export default defineComponent({
 <style scoped>
 button {
     font-size: 15px;
-    color: #017eb6;
+    color: white;
+    background: #017eb6;
     padding: 6px;
     width: -webkit-fill-available;
     text-transform: uppercase;
@@ -34,8 +36,8 @@ button {
 }
 button:hover {
     font-size: 15px;
-    color: white;
-    background: #017eb6;
+    color: #017eb6 !important;
+    background: white;
     padding: 6px;
     width: -webkit-fill-available;
     text-transform: uppercase;

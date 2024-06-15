@@ -1,8 +1,12 @@
 <template>
     <div class="card">
-        <h2 :style="{ color: cor }">{{ texto }}</h2>
-        <div class="card-interno">
-            <i :style="{ color: cor }" :class="['bi', icone]"></i>
+        <div class="card__cima">
+            <span :style="{ background: fundoIcone }">
+                <i :style="{ color: cor }" :class="['bi', icone]"></i>
+            </span>
+            <h2 :style="{ color: cor }">{{ texto }}</h2>
+        </div>
+        <div class="card__baixo">
             <h3 :style="{ color: cor }">{{ quantidade }}</h3>
         </div>
     </div>
@@ -19,6 +23,10 @@ export default defineComponent({
             default: "",
         },
         cor: {
+            type: String,
+            default: "",
+        },
+        fundoIcone: {
             type: String,
             default: "",
         },
@@ -49,25 +57,51 @@ export default defineComponent({
     box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.5);
 }
 
-.card-interno {
+.card__cima {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* h2 {
-    margin: 0;
-    font-size: 2rem;
+h2 {
+    margin: 5px 0;
 }
 
 i {
-    font-size: 3rem;
+    font-size: 2.8vh;
 }
 
-h3 {
+.card__cima span {
+    border-radius: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 0;
+}
+
+.card__baixo {
+    display: flex;
+    justify-content: end;
+}
+
+.card__baixo h3 {
+    font-size: 4vh;
     margin: 0;
-    font-size: 3.5rem;
-} */
+}
+
+@media(max-width: 480px) {
+    .card__cima {
+        display: flex;
+        flex-direction: column;
+    }
+    .card__cima span {
+        width: 35px;
+    }
+    h2 {
+        margin: 5px 0;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
 </style>
   

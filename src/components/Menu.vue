@@ -5,7 +5,7 @@
         </div>
 
         <div class="botao">
-            <Botao />
+            <Botao data-bs-toggle="modal" data-bs-target="#exampleModal" />
             <FontAwesomeIcon :icon="faHouse" />
         </div>
     </div>
@@ -29,13 +29,13 @@ export default defineComponent({
     height: 100vh;
     background: var(--color-primary);
     border-radius: 0 20px 20px 0;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 .menu h1 {
     color: var(--color-white);
     font-family: var(--font-primary);
-    font-size: 3vh;
+    font-size: 2.9vh;
 }
 
 @media (max-width: 1200px) {
